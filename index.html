@@ -3,69 +3,115 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Guia Meu RH</title>
+<title>Guia TOTVS Meu RH</title>
 
 <style>
-body{
+*{
   margin:0;
-  font-family: Arial, sans-serif;
-  background-image: url('fundoesp.png');
-background-size: cover;
-background-position: center;
-background-repeat: no-repeat;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family: 'Segoe UI', sans-serif;
+  height:100vh;
   display:flex;
   justify-content:center;
   align-items:center;
-  height:100vh;
-  color:white;
-  text-align:center;
+  background-image: url('fundoesp.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position:relative;
 }
 
+/* Camada escura sobre a imagem */
+body::before{
+  content:"";
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,0.45);
+}
+
+/* Container principal */
 .container{
+  position:relative;
   background:white;
-  color:#333;
-  padding:30px;
-  border-radius:20px;
+  padding:45px 35px;
+  border-radius:18px;
   width:90%;
-  max-width:400px;
-  box-shadow:0 10px 25px rgba(0,0,0,0.2);
+  max-width:420px;
+  text-align:center;
+  box-shadow:0 15px 35px rgba(0,0,0,0.25);
 }
 
+/* Logo */
+.logo{
+  width:150px;
+  margin:0 auto 25px auto;
+  display:block;
+}
+
+/* Título */
 h1{
+  font-size:22px;
   margin-bottom:10px;
+  color:#004d74;
 }
 
+/* Texto */
 p{
+  font-size:15px;
+  color:#555;
   margin-bottom:25px;
 }
 
+/* Botão */
 .button{
   display:block;
-  background:#5f2c82;
+  background:#004d74;
   color:white;
-  padding:15px;
-  border-radius:12px;
+  padding:16px;
+  border-radius:10px;
   text-decoration:none;
-  font-weight:bold;
+  font-weight:600;
   font-size:16px;
-  transition:0.3s;
+  transition:all 0.3s ease;
 }
 
+/* Hover */
 .button:hover{
-  background:#49a09d;
+  background:#006494;
+  transform:translateY(-2px);
+  box-shadow:0 8px 18px rgba(0,0,0,0.2);
+}
+
+/* Responsivo */
+@media (max-width:480px){
+  .container{
+    padding:35px 25px;
+  }
 }
 </style>
 </head>
 
 <body>
+
 <div class="container">
-  <img src="logo.png" alt="Logo Espiral" style="width:120px; margin-bottom:20px;"
+
+  <img src="logo.png" alt="Logo Espiral" class="logo">
+
   <h1>Guia TOTVS Meu RH</h1>
   <p>Manual passo a passo para utilizar o aplicativo.</p>
-  
+
   <a class="button" href="guia.MeuRH.pdf" target="_blank">
     📘 Abrir Manual
   </a>
+
 </div>
+
 </body>
 </html>
